@@ -1,0 +1,67 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+#showText {
+    display: none;
+    text-shadow: 2px 2px 4px blue;
+    transition: 0.2s;
+}
+#showText:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 4px gold;
+    border: 1px solid gold;
+    padding: 10px 40px;
+}
+
+.unswer--block{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: crimson;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+h3 {
+    display: flex;
+    padding: 20px 120px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background: linear-gradient(to left, crimson, rgb(0, 89, 255));
+    animation: gradientAnimation 3s infinite alternate;
+    background-size: 200% 100%; /* без этого анимация для граиента не будет работать */
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.show {
+    border: 1px solid #000;
+    background: linear-gradient(to right, #000, #fff);
+    padding: 20px 60px;
+    border-radius: 5px;
+    transition: 1s;
+}
+.show:hover {
+    cursor: pointer;
+}
+.show:active {
+    background: linear-gradient(to right, #000, red);
+}
